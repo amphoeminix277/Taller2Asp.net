@@ -138,7 +138,7 @@ t		SolucionTaller2 Uno=new SolucionTaller2();
                 Console.WriteLine("____________________________________");
                 Console.WriteLine("8. Consultar en orden ascendente según la edad a todas las personas y tomar sólo las primeras 5 personas.");
                 var CincoRegistros = from Cinco in personas
-                               where persona.nombre orderby persona.edad ascending
+                               where Cinco.nombre orderby Cinco.edad ascending
                                select Cinco;
 
                 foreach (var persona in CincoRegistros.Take(5))
@@ -194,7 +194,7 @@ t		SolucionTaller2 Uno=new SolucionTaller2();
                                 where (NombreApellido.sexo.ToUpper().StartsWith("F")) && 
                                 (NombreApellido.nombre.ToUpper().StartsWith("m")) && 
                                 (NombreApellido.sexo.ToUpper().EndsWith("z")) && 
-                               select f;
+                               select NombreApellido;
 
                 foreach (var persona in ConsultarmujeresMZ)
                 {
